@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>还款说明</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+	<!-- <link href="favicon.ico" rel="shortcut icon"> -->
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		line-height: 1;
+
+	}
+  img {
+		width: 100%;
+		line-height: 0;
+	}
+</style>
+</head>
+<body >
+	<div>
+		
+	</div>
+</body>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+  
+  $(function(){
+	test()
+  })
+  
+  function test(){
+		// var url = "/afm/api/sys/user/getUserModuleList";
+		var url = "/sn/api/feed_feedlist";
+		$.ajax({
+     		url: url,
+			type:"post",
+			dataType:"json",
+			headers: {
+				Accept: 'application/json, text/plain, */*',				
+			},
+			data: {
+				from: "news_webapp",
+				pd: "webapp",
+				os: "iphone",
+				mid: "0895EBEA3BA1ED452AE4D9214C15D15C:FG=1",
+				ver: "6",
+				category_id: "101",
+				action: 1,
+				display_time: 1562746932691,
+				wf: 0
+			},
+			async:false,
+	  	    success: function(data){
+			console.info(data)
+	  
+	  }});
+	  var data = {
+		  cuid:" 0895EBEA3BA1ED452AE4D9214C15D15C:FG=1",
+		  type: "tag",
+			OS: "iphone",
+			ver: 9,
+			from: "webapp",
+			rand: 1562750310768
+	  }
+	  var str = 'tn=bdapibaiyue&t=getuserdata'
+	  $.ajax({
+		url: '/news?tn=bdapibaiyue&t=getuserdata',
+		type:"post",
+		dataType:"json",
+		headers: {
+			Accept: 'application/json, text/plain, */*',
+		   contentType:"application/x-www-form-urlencoded;charset=utf-8"
+		},
+		data:data,
+		async:false,
+		success: function(data){
+			console.info(data,2222)
+	  
+	  }});
+  // https://news.baidu.com/news?tn=bdapibaiyue&t=getuserdata
+  }
+  </script>
+</html>
