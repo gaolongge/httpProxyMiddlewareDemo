@@ -27,5 +27,5 @@
       app.listen(8081)
       console.log('server is running!')
       ```
-      在浏览器输入localhost: 8080，监听8081端口,      
-    5. 运行node server.js,就可以看到
+      监听8081端口,      
+    5. 运行node server.js,  在浏览器输入localhost: 8081，按下F12查看后台就可以看到代理到的数据
