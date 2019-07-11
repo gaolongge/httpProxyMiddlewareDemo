@@ -7,14 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gaolongge/httpProxyMiddlewareDemo.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gaolongge/httpProxyMiddlewareDemo/issues"
-  },
-  "homepage": "https://github.com/gaolongge/httpProxyMiddlewareDemo#readme"
+  "devDependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.19.1"
+  }
 }
