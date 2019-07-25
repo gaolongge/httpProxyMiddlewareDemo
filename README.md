@@ -2,7 +2,7 @@
 ### 方法一：
    1. git clone https://github.com/gaolongge/httpProxyMiddlewareDemo.git 下载到本地
    2. node server.js 运行
-### 方法二：（最原始的搭建）
+### 方法二：（启始搭建）
    1. 装node环境，下载地址 https://nodejs.org/zh-cn/ ，然后就一直下一步就行，打开cmd输入 node -v，会显示版本号node则是安装成功；
    2. 建立一个文件，在此文件下打开cmd，执行 npm init,则会出package.json 文件；
    3. npm install http-proxy-middleware express --save-dev
@@ -23,7 +23,12 @@
           target: 'https://news.baidu.com',         
           changeOrigin: true
       }))
-       //       '^/' : ''
+      // 代理多个服务
+      app.use('/aaa', proxy({
+         //目标后端服务地址
+         target: 'https://xxx.ddd.com',
+          changeOrigin: true
+      }))
       app.listen(8081)
       console.log('server is running!')
       ```
